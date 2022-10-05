@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+		<!-- 만약에 null 데이터가 전달되었으면 빈칸이 아닌 NULL로 인식하도록 설정 -->
+	</settings>
+	<typeAliases>
+		<typeAlias type="com.kh.junspring.member.domain.Member" alias="Member"/>
+		<typeAlias type="com.kh.junspring.board.domain.Board" 	alias="Board"/>
+		<typeAlias type="com.kh.junspring.board.domain.Reply" 	alias="Reply"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="mappers/member-mapper.xml"/>
+		<mapper resource="mappers/board-mapper.xml"/>
+	</mappers>
+</configuration>
